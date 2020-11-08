@@ -2,9 +2,20 @@ import subprocess
 import sys
 import getopt
 import os
+
 FILE_LIST = []
 PNG_FILE_LIST = []
 image_extensions = ('.png', '.jpg', '.jpeg')
+def handle_file(file_path):
+    trash, extension = os.path.splitext(file_path)
+    use_this = file_path.replace('\\', '\\\\')
+    use_this = use_this.replace(' ', '\\ ')
+    # print('a', use_this)
+    if extension in image_extensions:
+        FILE_LIST.append(str(file_path))
+    if extension == image_extensions[0]:
+        PNG_FILE_LIST.append(str(file_path))
+
 def recursive_file_search(paths):
     paths.sort()
     for path in paths:
@@ -13,19 +24,11 @@ def recursive_file_search(paths):
                 if os.path.isdir(os.path.join(path, file_)):
                     recursive_file_search([os.path.join(path, file_)])
                 elif os.path.isfile(os.path.join(path, file_)):
-                    trash, extension = os.path.splitext(file_)
-                    if extension in image_extensions:
-                        FILE_LIST.append(os.path.join(path, file_))
-                    if extension == image_extensions[0]:
-                        PNG_FILE_LIST.append(os.path.join(path, file_))
+                    handle_file(os.path.join(path, file_))
         elif os.path.isfile(path):
-            trash, extension = os.path.splitext(path)
-            if extension in image_extensions:
-                FILE_LIST.append(path)
-            if extension == image_extensions[0]:
-                PNG_FILE_LIST.append(path)
+            handle_file(path)
         elif os.path.exists(path):
-            print("{} Path isn't an image file or directory")
+            print("{} Path isn't an image file or directory".format(path))
 
 args = sys.argv[1:]
 opts, args = getopt.getopt(args, 'o:')
@@ -38,6 +41,5 @@ for file_path in FILE_LIST:
 print('PNG FILE LIST:')
 for file_path in PNG_FILE_LIST:
     print(file_path)
-# subprocess.call('remove_alpha.sh', shell=True)
-subprocess.call(['remove_alpha.sh', *PNG_FILE_LIST])
-# os.system('remove_alpha.sh ')
+subprocess.call(['remove_alpha.sh', *PNG_FILE_LIST], shell=True)
+# subprocess.call(['convert_images_to_pdf.sh', output_path, *FILE_LIST], shell=True)
