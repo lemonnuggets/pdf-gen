@@ -42,4 +42,4 @@ print('PNG FILE LIST:')
 for file_path in PNG_FILE_LIST:
     print(file_path)
 subprocess.call(['remove_alpha.sh', *PNG_FILE_LIST], shell=True)
-# subprocess.call(['convert_images_to_pdf.sh', output_path, *FILE_LIST], shell=True)
+subprocess.call(['convert_images_to_pdf.sh', output_path, *FILE_LIST], shell=True)
