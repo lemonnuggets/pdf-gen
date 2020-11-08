@@ -1,1 +1,2 @@
 filepaths=$@
+echo $filepaths
