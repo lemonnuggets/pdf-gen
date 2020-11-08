@@ -32,7 +32,6 @@ def recursive_file_search(paths):
 
 args = sys.argv[1:]
 opts, args = getopt.getopt(args, 'o:')
-print(opts, args)
 output_path = opts[0][1]
 recursive_file_search(args)
 print('FILE LIST:')
