@@ -9,3 +9,14 @@ Keep in that mind that files are added to pdf in the order of their file names.
 `pdf_gen.py -o {output-file-name}.pdf assets/ image-name.png`
 
 Will look for files in assets folder and also add image-name.png to pdf with name {output-file-name}.pdf
+
+## Prerequisites
+* Image Magick
+	`choco install imagemagick`
+* Img2pdf
+	`pip3 install img2pdf`
+
+## TODO
+[] Make it interactive
+[] Use img2pdf as a library instead
+[] Somehow get rid of imagemai=gick as a dependancy as well, so that only python script needs to be there
