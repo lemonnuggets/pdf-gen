@@ -17,6 +17,6 @@ Will look for files in assets folder and also add image-name.png to pdf with nam
 	`pip3 install img2pdf`
 
 ## TODO
-[] Make it interactive
-[] Use img2pdf as a library instead
-[] Somehow get rid of imagemai=gick as a dependancy as well, so that only python script needs to be there
+- [ ] Make it interactive
+- [ ] Use img2pdf as a library instead
+- [ ] Somehow get rid of imagemai=gick as a dependancy as well, so that only python script needs to be there
