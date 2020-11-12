@@ -17,9 +17,16 @@ Keep in that mind that files are added to pdf in the order of their file names.
 Will look for files in assets folder and also add image-name.png to pdf with name {output-file-name}.pdf
 
 ## Usage Example
+### Directories and Subdirectories
+![name-of-you-image](https://github.com/lemonnuggets/pdf-gen/blob/master/github-assets/1.png?raw=true)
+![2](https://github.com/lemonnuggets/pdf-gen/blob/master/github-assets/2.png?raw=true)
+![3](https://github.com/lemonnuggets/pdf-gen/blob/master/github-assets/3.png?raw=true)
 
+### Command and Output
+![4](https://github.com/lemonnuggets/pdf-gen/blob/master/github-assets/4.png?raw=true)
+![5](https://github.com/lemonnuggets/pdf-gen/blob/master/github-assets/5.png?raw=true)
 
 ## TODO
 - [ ] Make it interactive
 - [ ] Use img2pdf as a library instead
-- [ ] Somehow get rid of imagemai=gick as a dependancy as well, so that only python script needs to be there
+- [ ] Somehow get rid of imagemagick as a dependancy as well, so that only python script needs to be there
