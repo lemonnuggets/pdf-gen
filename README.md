@@ -3,9 +3,12 @@ Script to automatically make pdf's from images in any folders
 
 ## Prerequisites
 * Image Magick
-	`choco install imagemagick`
+	install
+	https://docs.wand-py.org/en/latest/guide/install.html#install-imagemagick-windows
+	and
+	`pip install wand`
 * Img2pdf
-	`pip3 install img2pdf`
+	`pip install img2pdf`
 
 ## How To Use
 Call pdf_gen.py with flag -o to mark desired output file and every file or folder that you want to look for images in (recursively searches subfolders automatically).

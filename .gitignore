@@ -2,3 +2,5 @@ __pycache__/
 build/
 dist/
 pdf_gen.spec
+.vscode
+irrelevant-scripts
