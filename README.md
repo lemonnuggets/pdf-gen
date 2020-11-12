@@ -2,16 +2,16 @@
 Script to automatically make pdf's from images in any folders
 
 ## Prerequisites
-* Image Magick
+* **Image Magick**
 
-	install from
-	
-	https://docs.wand-py.org/en/latest/guide/install.html#install-imagemagick-windows
-
-	and also
+	install both
 	
 	`pip install wand`
-* Img2pdf
+	
+	https://docs.wand-py.org/en/latest/guide/install.html#install-imagemagick-windows
+	
+	
+* **Img2pdf**
 	
 	`pip install img2pdf`
 
@@ -25,12 +25,12 @@ Keep in that mind that files are added to pdf in the order of their file names.
 Will look for files in assets folder and also add image-name.png to pdf with name {output-file-name}.pdf
 
 ## Usage Example
-### Directories and Subdirectories
+#### Directories and Subdirectories
 ![1](https://github.com/lemonnuggets/pdf-gen/blob/master/github-assets/1.png?raw=true)
 ![2](https://github.com/lemonnuggets/pdf-gen/blob/master/github-assets/2.png?raw=true)
 ![3](https://github.com/lemonnuggets/pdf-gen/blob/master/github-assets/3.png?raw=true)
 
-### Command and Output
+#### Command and Output
 ![4](https://github.com/lemonnuggets/pdf-gen/blob/master/github-assets/4.png?raw=true)
 ![5](https://github.com/lemonnuggets/pdf-gen/blob/master/github-assets/5.png?raw=true)
 
